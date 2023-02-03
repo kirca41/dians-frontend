@@ -4,7 +4,7 @@ import Dropdown from './Dropdown';
 import axios from 'axios';
 import qs from 'qs';
 
-const stars = [5, 4, 3, 2, 1];
+const stars = [5.0 , 4.0 , 3.0 , 2.0 , 1.0 ];
 const cities = ['Берово', 'Битола', 'Гевгелија', 'Кавадарци', 
     'Куманово', 'Охрид', 'Прилеп', 'Скопје', 'Струга', 'Струмица', 'Тетово'];
 const propertyTypes = [
@@ -87,7 +87,7 @@ const FiltersForm = () => {
                         checked={checkedStars[idx]} 
                         onChange={() => handleStarsChange(idx)}
                     /> 
-                    {item}
+                    {Math.round(item)}
                 </label>
             </div>
         );
