@@ -19,7 +19,7 @@ const Favourites = () => {
             };
 
             try {
-                let { data } = await axios.get('http://accommodations-mk.azurewebsites.net/favorites/show', headersConfig);
+                let { data } = await axios.get('https://accommodations-mk.azurewebsites.net/favorites/show', headersConfig);
                 setUserAccommodations(data.accommodations);
             } catch(err) {
                 navigate('/login?error=' + 'Автентикацискиот токен е истечен. Ве молиме логирајте се повторно.');

@@ -34,7 +34,7 @@ const Login = () => {
         }
         else {
             const params = new URLSearchParams({ username, password });
-            let { data } = await axios.post('http://accommodations-mk.azurewebsites.net/authenticate', params, { headers: {'content-type': 'application/x-www-form-urlencoded'}});
+            let { data } = await axios.post('https://accommodations-mk.azurewebsites.net/authenticate', params, { headers: {'content-type': 'application/x-www-form-urlencoded'}});
             setUser(username);
             setToken(data.jwt);
 
@@ -46,7 +46,7 @@ const Login = () => {
                 }
             };
 
-            ({ data } = await axios.get('http://accommodations-mk.azurewebsites.net/favorites/show', headersConfig));
+            ({ data } = await axios.get('https://accommodations-mk.azurewebsites.net/favorites/show', headersConfig));
 
             setUserAccommodations(data.accommodations);
 

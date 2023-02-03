@@ -13,7 +13,7 @@ const AccommodationInfo = () => {
 
     useEffect(() => {
         const fetchAccommodation = async () => {
-            const { data } = await axios.get(`http://accommodations-mk.azurewebsites.net/accommodation/${id}`);
+            const { data } = await axios.get(`https://accommodations-mk.azurewebsites.net/accommodation/${id}`);
             
             setAccommodation(data);
         }

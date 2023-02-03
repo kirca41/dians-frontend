@@ -10,7 +10,7 @@ const Search = ({ setAccommodations }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const { data } = await axios.get('http://accommodations-mk.azurewebsites.net/accommodation/search', {
+        const { data } = await axios.get('https://accommodations-mk.azurewebsites.net/accommodation/search', {
             params: {
               keyword
             }

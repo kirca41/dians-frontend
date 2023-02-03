@@ -15,7 +15,7 @@ const AccommodationCard = ({ accommodation, setSelected }) => {
                'Content-type': 'application/x-www-form-urlencoded'
             }
         };
-        axios.post('http://accommodations-mk.azurewebsites.net/favorites/add', params, headersConfig)
+        axios.post('https://accommodations-mk.azurewebsites.net/favorites/add', params, headersConfig)
         .then((response) => {
             let newUserAccommodations;
             if (userAccommodations.find(e => e.id == accommodation.id)) {

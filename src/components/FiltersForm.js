@@ -64,7 +64,7 @@ const FiltersForm = () => {
             }
         });
 
-        let { data } = await axiosInstance.get('http://accommodations-mk.azurewebsites.net/accommodation/filter', {
+        let { data } = await axiosInstance.get('https://accommodations-mk.azurewebsites.net/accommodation/filter', {
             params: {
               city: cityParams,
               stars: starsParams,

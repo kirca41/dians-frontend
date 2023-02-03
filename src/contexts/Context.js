@@ -12,7 +12,7 @@ export const ContextProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let { data } = await axios.get('http://accommodations-mk.azurewebsites.net/accommodation');
+            let { data } = await axios.get('https://accommodations-mk.azurewebsites.net/accommodation');
             setAccommodations(data);
         }
 

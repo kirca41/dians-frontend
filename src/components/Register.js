@@ -27,7 +27,7 @@ const Register = () => {
         }
         else {
             const params = new URLSearchParams({ username, password, repeatedPassword, name, surname });
-            axios.post('http://accommodations-mk.azurewebsites.net/register', params, { headers: {'content-type': 'application/x-www-form-urlencoded'}})
+            axios.post('https://accommodations-mk.azurewebsites.net/register', params, { headers: {'content-type': 'application/x-www-form-urlencoded'}})
                 .then((response) => {
                     console.log(response);
                     navigate('/login');
