@@ -4,7 +4,7 @@ import Dropdown from './Dropdown';
 import axios from 'axios';
 import qs from 'qs';
 
-const stars = [5.0 , 4.0 , 3.0 , 2.0 , 1.0 ];
+const stars = [5, 4, 3, 2, 1 ];
 const cities = ['Берово', 'Битола', 'Гевгелија', 'Кавадарци', 
     'Куманово', 'Охрид', 'Прилеп', 'Скопје', 'Струга', 'Струмица', 'Тетово'];
 const propertyTypes = [
@@ -50,7 +50,7 @@ const FiltersForm = () => {
         event.preventDefault();
 
         const cityParams = cities.map((c, i) => checkedCities[i] ? c : undefined);
-        const starsParams = stars.map((s, i) => checkedStars[i] ? s : undefined);
+        const starsParams = stars.map((s, i) => checkedStars[i] ? s * 1.0 : undefined);
         const propertyTypesParams = propertyTypes.map((pt, i) => checkedPropertyTypes[i] ? pt.name : undefined);
         // With this logic if the internet access checkbox is not selected we treat it as if
         // the user doesn't want internet access not as if he doesn't care
@@ -87,7 +87,7 @@ const FiltersForm = () => {
                         checked={checkedStars[idx]} 
                         onChange={() => handleStarsChange(idx)}
                     /> 
-                    {Math.round(item)}
+                    {item}
                 </label>
             </div>
         );
