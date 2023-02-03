@@ -1,0 +1,153 @@
+* {
+    font-size: 1em !important;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.map-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ui.cards {
+    width: 30%;
+    padding: 2%;
+    margin: 0;
+}
+
+.ui.card {
+    height: fit-content;
+}
+
+.content {
+    position: relative;
+}
+
+.heart-link {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    color: darkgray;
+}
+
+.heart-link:hover {
+    color: red;
+}
+
+.show-on-map:hover {
+    cursor: pointer;
+}
+
+.ui.form .field>label.input-label {
+    font-size: 1.2em;
+}
+
+.ui.form .field>label.input-label input {
+    vertical-align: baseline;
+    margin-right: 0.4em;
+}
+
+.ui.form {
+    width: 20%;
+    padding: 1% 1% 5% 1%;
+}
+
+.ui.menu {
+    margin: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(87deg, rgba(255,255,255,1) 0%, rgba(167,208,249,1) 75%, rgba(167,208,249,1) 100%);
+}
+
+.ui.text.container {
+    margin-top: 8%;
+}
+
+.ui.red.basic.label {
+    margin-top: 2%;
+}
+
+.ui.form.login-register-form {
+    width: 40%;
+}
+
+.ui.cards.favourites-list {
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.overflow {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.login-register-container {
+    display: grid;
+    place-items: center;
+}
+
+.buttons {
+    display: flex;
+    column-gap: 2%;
+}
+
+.back {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-y: scroll;
+    }
+
+    .overflow {
+        overflow-y: hidden;
+    }
+
+    .map-list-container {
+        display: block;
+    }
+
+    .map-list-container > .ui {
+        height: fit-content;
+    }
+
+    .ui.form.overflow {
+        width: 100%;
+    }
+
+    .ui.cards {
+        width: 100%;
+    }
+
+    .ui.form.login-register-form {
+        width: 70%;
+    }
+
+    .ui.menu {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}
+
+.accommodation-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15%;
+}
