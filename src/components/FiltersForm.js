@@ -3,6 +3,7 @@ import { Context } from '../contexts/Context';
 import Dropdown from './Dropdown';
 import axios from 'axios';
 import qs from 'qs';
+import StringifyWithFloats from 'stringify-with-floats'
 
 const stars = [5, 4, 3, 2, 1 ];
 const cities = ['Берово', 'Битола', 'Гевгелија', 'Кавадарци', 
