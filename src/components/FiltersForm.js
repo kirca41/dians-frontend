@@ -3,9 +3,8 @@ import { Context } from '../contexts/Context';
 import Dropdown from './Dropdown';
 import axios from 'axios';
 import qs from 'qs';
-import StringifyWithFloats from 'stringify-with-floats'
 
-const stars = [5, 4, 3, 2, 1 ];
+const stars = ["5.0", "4.0", "3.0", "2.0", "1.0" ];
 const cities = ['Берово', 'Битола', 'Гевгелија', 'Кавадарци', 
     'Куманово', 'Охрид', 'Прилеп', 'Скопје', 'Струга', 'Струмица', 'Тетово'];
 const propertyTypes = [
@@ -73,9 +72,6 @@ const FiltersForm = () => {
             sortValue: sortingDirectionParam
         }
 
-        const stringify = StringifyWithFloats({ stars: 'float' })
-        stringify(params)
-
         let { data } = await axiosInstance.get('https://accommodations-mk.azurewebsites.net/accommodation/filter', {
             params: params
         });
@@ -93,7 +89,7 @@ const FiltersForm = () => {
                         checked={checkedStars[idx]} 
                         onChange={() => handleStarsChange(idx)}
                     /> 
-                    {item}
+                    {Math.round(parseFloat(item))}
                 </label>
             </div>
         );
